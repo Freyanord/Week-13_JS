@@ -41,7 +41,12 @@ const newAvatar = [
     "avatar5.jpg",
 ];
 
-if
+if (avatar === ' ') {
+    let randomAvatar = newAvatar[Math.floor(Math.random() * newAvatar.length)];
+    avatar.value = randomAvatar;
+} else {
+    avatar = avatar.value;
+}
 
 chat.innerHTML = `<div class="container">
     <img src="${avatar.value}" alt="лицо" class="userimage">

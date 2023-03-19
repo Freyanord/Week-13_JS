@@ -33,6 +33,16 @@ if(radio.checked) {
     user.value = "   ";
 } 
 
+const newAvatar = [
+    "avatar1.jpg",
+    "avatar2.jpg",
+    "avatar3.jpg",
+    "avatar4.jpg",
+    "avatar5.jpg",
+];
+
+if
+
 chat.innerHTML = `<div class="container">
     <img src="${avatar.value}" alt="лицо" class="userimage">
     <p class="username">Username</p>

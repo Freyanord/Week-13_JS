@@ -34,19 +34,19 @@ if(radio.checked) {
 } 
 
 const newAvatar = [
-    "avatar1.jpg",
-    "avatar2.jpg",
-    "avatar3.jpg",
-    "avatar4.jpg",
-    "avatar5.jpg",
+    "img/avatar1.jpg",
+    "img/avatar2.jpg",
+    "img/avatar3.jpg",
+    "img/avatar4.jpg",
+    "img/avatar5.jpg",
 ];
 
 if (avatar === ' ') {
     let randomAvatar = newAvatar[Math.floor(Math.random() * newAvatar.length)];
-    avatar.value = randomAvatar;
+    avatar = randomAvatar;
 } else {
-    avatar = avatar.value;
-}
+    avatar = avatar;
+};
 
 chat.innerHTML = `<div class="container">
     <img src="${avatar.value}" alt="лицо" class="userimage">

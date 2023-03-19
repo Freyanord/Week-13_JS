@@ -1,0 +1,21 @@
+.container {
+    display: flexbox; /*надо переделать на flex*/
+    max-width: 50%;
+    max-height: 70%;
+}
+.radio {
+    margin: 0px 0px 15px;
+}
+.avatar {
+    max-width: 70%;
+}
+.button {
+    margin: 10px 0px;
+}
+.chat {
+    border: 1px solid black;
+    padding: 25px;
+}
+.userimage {
+    max-width: 50px;
+}

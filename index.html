@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Сервис комментариев</title>
+</head>
+<body>
+    <div class="container">
+        <div class="greeting">
+            <h2>Сервис комментариев со спам-фильтром</h2>
+            <h3>Оставьте Ваш комментарий</h3>
+            <div class="radio">Показывать Ваше имя?&nbsp
+                Да <input type="radio" name="show"/>
+                Нет <input type="radio" name="show" id="no" checked/>
+            </div>
+        </div>
+        <div>
+            <label for="name">Введите Ваше <b>ФИО</b></label><br>
+            <input type="text" id="username"/>
+        </div>
+        <div>
+            <label for="link">Введите ссылку <b>Вашего аватара</b></label><br>
+            <input type="text" id="url-input"/>
+            
+        </div>
+        <div>
+            <label for="comment"><b>Оставьте комментарий</b></label><br>
+            <input class="comment-area" cols="50" rows="10"></input>
+        </div>
+        <div>
+            <button class="button" type="submit" id="comment-add">Отправить</button>
+        </div>
+        <div >
+            <h3>Чат</h3>
+            <div class="chat"></div>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html> 

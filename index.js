@@ -27,26 +27,11 @@ function addNewMessage () {
     <p class="username">${user.value}</p>
     <p class="message" >${comment.value.replace(/Viagra/g, "***")}</p>
     <p class="date">${date}</p>
-</div>`
+</div>` 
 
 if(radio.checked) {
     user.value = "   ";
 } 
-
-const newAvatar = [
-    "img/avatar1.jpg",
-    "img/avatar2.jpg",
-    "img/avatar3.jpg",
-    "img/avatar4.jpg",
-    "img/avatar5.jpg",
-];
-
-if (avatar === ' ') {
-    let randomAvatar = newAvatar[Math.floor(Math.random() * newAvatar.length)];
-    avatar = randomAvatar;
-} else {
-    avatar = avatar;
-};
 
 chat.innerHTML = `<div class="container">
     <img src="${avatar.value}" alt="лицо" class="userimage">
@@ -56,9 +41,27 @@ chat.innerHTML = `<div class="container">
 </div>`
 
 };
+function changeAvatar () {
+
+    const newAvatar = [
+    "avatar1.jpg",
+    "avatar2.jpg",
+    "avatar3.jpg",
+    "avatar4.jpg",
+    "avatar5.jpg",
+];
+
+if (avatar === "") {
+    let randomAvatar = newAvatar[Math.floor((Math.random() * 5) * newAvatar.length)];
+    avatar = randomAvatar;
+} else {
+    avatar = avatar;
+};
+
+};
 
 button.addEventListener('click', addNewMessage);
-
+button.addEventListener('click', changeAvatar);
 
 
 

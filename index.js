@@ -1,5 +1,6 @@
 const user = document.getElementById('username');
 const avatar = document.getElementById('url-input');
+const userimage = document.querySelector('.userimage')
 const comment = document.querySelector('.comment-area');
 const chat = document.querySelector('.chat');
 const button = document.querySelector('.button');
@@ -41,22 +42,30 @@ chat.innerHTML = `<div class="container">
 </div>`
 
 };
+
 function changeAvatar () {
 
     const newAvatar = [
-    "avatar1.jpg",
-    "avatar2.jpg",
-    "avatar3.jpg",
-    "avatar4.jpg",
-    "avatar5.jpg",
+    "img/avatar1.jpg",
+    "img/avatar2.jpg",
+    "img/avatar3.jpg",
+    "img/avatar4.jpg",
+    "img/avatar5.jpg",
 ];
 
 if (avatar === "") {
     let randomAvatar = newAvatar[Math.floor((Math.random() * 5) * newAvatar.length)];
-    avatar = randomAvatar;
+    userimage = randomAvatar;
 } else {
-    avatar = avatar;
+    userimage = avatar;
 };
+
+hat.innerHTML = `<div class="container">
+    <img src="${userimage}" alt="лицо" class="userimage">
+    <p class="username">Username</p>
+    <p class="message" >${comment.value.replace(/Viagra/g, "***")}</p>
+    <p class="date">${date}</p>
+</div>`
 
 };
 

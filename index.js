@@ -45,7 +45,7 @@ chat.innerHTML = `<div class="container">
 
 function changeAvatar () {
 
-    const newAvatar = [
+    const newAvatars = [
     "img/avatar1.jpg",
     "img/avatar2.jpg",
     "img/avatar3.jpg",
@@ -54,7 +54,7 @@ function changeAvatar () {
 ];
 
 if (avatar === "") {
-    let randomAvatar = newAvatar[Math.floor((Math.random() * 5) * newAvatar.length)];
+    let randomAvatar = newAvatars[Math.floor((Math.random() * 5) * newAvatars.length)];
     userimage = randomAvatar;
 } else {
     userimage = avatar;

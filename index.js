@@ -60,7 +60,7 @@ if (avatar === "") {
     userimage = avatar;
 };
 
-hat.innerHTML = `<div class="container">
+chat.innerHTML = `<div class="container">
     <img src="${userimage}" alt="лицо" class="userimage">
     <p class="username">Username</p>
     <p class="message" >${comment.value.replace(/Viagra/g, "***")}</p>

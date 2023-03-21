@@ -1,7 +1,8 @@
 .container {
-    display: flexbox; /*надо переделать на flex*/
+    display: flex-inline;
     max-width: 50%;
     max-height: 70%;
+    background-color:antiquewhite;
 }
 .radio {
     margin: 0px 0px 15px;

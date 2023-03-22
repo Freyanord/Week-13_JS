@@ -40,7 +40,6 @@ chat.innerHTML = `<div class="container">
     <p class="message" >${comment.value.replace(/Viagra/g, "***")}</p>
     <p class="date">${date}</p>
 </div>`
-
 };
 
 function changeAvatar () {
@@ -66,7 +65,6 @@ chat.innerHTML = `<div class="container">
     <p class="message" >${comment.value.replace(/Viagra/g, "***")}</p>
     <p class="date">${date}</p>
 </div>`
-
 };
 
 button.addEventListener('click', addNewMessage);

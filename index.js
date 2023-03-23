@@ -1,6 +1,6 @@
 const user = document.getElementById('username');
-const avatar = document.getElementById('url-input');
-const userimage = document.querySelector('.userimage')
+let avatar = document.getElementById('url-input');
+let userimage = document.querySelector('.userimage')
 const comment = document.querySelector('.comment-area');
 const chat = document.querySelector('.chat');
 const button = document.querySelector('.button');
@@ -44,7 +44,7 @@ chat.innerHTML = `<div class="container">
 
 function changeAvatar () {
 
-    const newAvatars = [
+    let newAvatars = [
     "img/avatar1.jpg",
     "img/avatar2.jpg",
     "img/avatar3.jpg",
@@ -52,11 +52,11 @@ function changeAvatar () {
     "img/avatar5.jpg",
 ];
 
-if (avatar === "") {
-    let randomAvatar = newAvatars[Math.floor((Math.random() * 5) * newAvatars.length)];
+if (avatar.value === "") {
+    let randomAvatar = newAvatars[Math.floor(Math.random() * newAvatars.length)];
     userimage = randomAvatar;
 } else {
-    userimage = avatar;
+    userimage = avatar.value;
 };
 
 chat.innerHTML = `<div class="container">

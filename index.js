@@ -24,6 +24,9 @@ function checkSpam() {
 };
 
 function addNewMessage () {
+    if(radio.checked) {
+        user.value = "   ";
+    }
     chat.insertAdjacentHTML('beforeend', `
     <div class="container">
         <img src="${avatar.value}" alt="лицо" class="userimage">
@@ -33,10 +36,6 @@ function addNewMessage () {
     </div>
 `)
 };
-
-if(radio.checked) {
-    user.value = "   ";
-}
 
 function changeAvatar () {
     let newAvatars = [

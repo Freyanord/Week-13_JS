@@ -9,14 +9,15 @@ const date = new Date ().toLocaleString();
 
 //https://i.pinimg.com/280x280_RS/ce/2c/e3/ce2ce3388fb2fd6d3687b41a558d9ad8.jpg
 
+function capitalize(input) {
+    input.value = input.value.trim().replace(/(^|\s)\S/g, function(a) {
+        return a.toUpperCase();
+    });
+}
+
 user.addEventListener('input', function () {
     capitalize(this);
 });
-
-function capitalize(user){
-    user.value = user.value.replace(/(^|\s)\S/g,
-    function(a) {return a.toUpperCase()});
-};
 
 function checkSpam() {
     chat.innerHTML = comment.value.replace(/(viagra|xxx)/gi, "***");

@@ -39,7 +39,6 @@ if(radio.checked) {
 } 
 
 function changeAvatar () {
-
     let newAvatars = [
     "img/avatar1.jpg",
     "img/avatar2.jpg",

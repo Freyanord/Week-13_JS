@@ -19,28 +19,31 @@ function capitalize(user){
 };
 
 function checkSpam() {
-    chat.innerHTML = comment.value.replace(/Viagra/g, "***");
+    chat.innerHTML = comment.value.replace(/(viagra|xxx)/gi, "***");
 };
 
 function addNewMessage () {
-    chat.innerHTML = `<div class="container">
-    <img src="${avatar.value}" alt="лицо" class="userimage">
-    <p class="username">${user.value}</p>
-    <p class="message" >${comment.value.replace(/Viagra/g, "***")}</p>
-    <p class="date">${date}</p>
-</div>` 
+    chat.insertAdjacentHTML('beforeend', `
+    <div class="container">
+        <img src="${avatar.value}" alt="лицо" class="userimage">
+        <p class="username">${user.value}</p>
+        <p class="message">${comment.value.replace(/(viagra|xxx)/gi, "***")}</p>
+        <p class="date">${date}</p>
+    </div>
+`);
+}
 
 if(radio.checked) {
     user.value = "   ";
 } 
 
-chat.innerHTML = `<div class="container">
-    <img src="${avatar.value}" alt="лицо" class="userimage">
-    <p class="username">Username</p>
-    <p class="message" >${comment.value.replace(/Viagra/g, "***")}</p>
-    <p class="date">${date}</p>
-</div>`
-};
+// chat.innerHTML = `<div class="container">
+//     <img src="${avatar.value}" alt="лицо" class="userimage">
+//     <p class="username">Username</p>
+//     <p class="message" >${comment.value.replace(/Viagra/g, "***")}</p>
+//     <p class="date">${date}</p>
+// </div>`
+// };
 
 function changeAvatar () {
 
@@ -58,15 +61,7 @@ if (avatar.value === "") {
 } else {
     userimage = avatar.value;
 };
-
-chat.innerHTML = `<div class="container">
-    <img src="${userimage}" alt="лицо" class="userimage">
-    <p class="username">Username</p>
-    <p class="message" >${comment.value.replace(/Viagra/g, "***")}</p>
-    <p class="date">${date}</p>
-</div>`
-};
-
+}
 button.addEventListener('click', addNewMessage);
 button.addEventListener('click', changeAvatar);
 

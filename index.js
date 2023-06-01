@@ -38,14 +38,6 @@ if(radio.checked) {
     user.value = "   ";
 } 
 
-// chat.innerHTML = `<div class="container">
-//     <img src="${avatar.value}" alt="лицо" class="userimage">
-//     <p class="username">Username</p>
-//     <p class="message" >${comment.value.replace(/Viagra/g, "***")}</p>
-//     <p class="date">${date}</p>
-// </div>`
-// };
-
 function changeAvatar () {
 
     let newAvatars = [

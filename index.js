@@ -13,7 +13,7 @@ function capitalize(input) {
     input.value = input.value.trim().replace(/(^|\s)\S/g, function(a) {
         return a.toUpperCase();
     });
-}
+};
 
 user.addEventListener('input', function () {
     capitalize(this);
@@ -31,29 +31,29 @@ function addNewMessage () {
         <p class="message">${comment.value.replace(/(viagra|xxx)/gi, "***")}</p>
         <p class="date">${date}</p>
     </div>
-`);
-}
+`)
+};
 
 if(radio.checked) {
     user.value = "   ";
-} 
+}
 
 function changeAvatar () {
     let newAvatars = [
-    "img/avatar1.jpg",
-    "img/avatar2.jpg",
-    "img/avatar3.jpg",
-    "img/avatar4.jpg",
-    "img/avatar5.jpg",
-];
+        "img/avatar1.jpg",
+        "img/avatar2.jpg",
+        "img/avatar3.jpg",
+        "img/avatar4.jpg",
+        "img/avatar5.jpg",
+    ];
+    if (!avatar.value) {
+        let randomAvatar = newAvatars[Math.floor(Math.random() * newAvatars.length)];
+        userimage = randomAvatar;
+    } else {
+        userimage = avatar.value;
+    }
+    };
 
-if (avatar.value === "") {
-    let randomAvatar = newAvatars[Math.floor(Math.random() * newAvatars.length)];
-    userimage = randomAvatar;
-} else {
-    userimage = avatar.value;
-};
-}
 button.addEventListener('click', addNewMessage);
 button.addEventListener('click', changeAvatar);
 

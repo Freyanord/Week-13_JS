@@ -25,11 +25,11 @@ function checkSpam() {
 
 function addNewMessage () {
     if(radio.checked) {
-        user.value = "   ";
+        user.value = " ";
     }
     chat.insertAdjacentHTML('beforeend', `
     <div class="container">
-        <img src="${avatar.value}" alt="лицо" class="userimage">
+        <img src="${userimage}" alt="лицо" class="userimage">
         <p class="username">${user.value}</p>
         <p class="message">${comment.value.replace(/(viagra|xxx)/gi, "***")}</p>
         <p class="date">${date}</p>

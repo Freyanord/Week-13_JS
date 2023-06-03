@@ -27,14 +27,12 @@ function addNewMessage () {
     if (radio.checked) {
         user.value = " ";
     }
-    chat.insertAdjacentHTML('beforeend', `
-    <div class="container">
-        <img src="${userimage}" alt="лицо" class="userimage">
-        <p class="username">${user.value}</p>
-        <p class="message">${comment.value.replace(/(viagra|xxx)/gi, "***")}</p>
-        <p class="date">${date}</p>
-    </div>
-`)
+    chat.insertAdjacentHTML('beforeend', `<div class="container">
+    <img src="${userimage}" alt="лицо" class="userimage">
+    <p class="username">${user.value}</p>
+    <p class="message">${comment.value.replace(/(viagra|xxx)/gi, "***")}</p>
+    <p class="date">${date}</p>
+</div>`)
 };
 
 function changeAvatar () {

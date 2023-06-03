@@ -12,11 +12,15 @@
 }
 .button {
     margin: 10px 0px;
+    border-radius: 15px;
+    background-color: lightsalmon;
 }
 .chat {
+    
     border: 2px solid black;
     padding: 25px;
 }
 .userimage {
     max-width: 50px;
+    max-height: 50px;
 }

@@ -24,7 +24,7 @@ function checkSpam() {
 };
 
 function addNewMessage () {
-    if(radio.checked) {
+    if (radio.checked) {
         user.value = " ";
     }
     chat.insertAdjacentHTML('beforeend', `
@@ -48,10 +48,14 @@ function changeAvatar () {
     if (!avatar.value) {
         let randomAvatar = newAvatars[Math.floor(Math.random() * newAvatars.length)];
         userimage = randomAvatar;
+        // userimage.src = randomAvatar;
     } else {
         userimage = avatar.value;
+        // userimage.src = avatar.value;
     }
     };
+
+// button.addEventListener("click", changeAvatar, addNewMessage);
 
 button.addEventListener('click', addNewMessage);
 button.addEventListener('click', changeAvatar);

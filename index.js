@@ -55,8 +55,8 @@ function changeAvatar () {
 
 // button.addEventListener("click", changeAvatar, addNewMessage);
 
-button.addEventListener('click', addNewMessage);
 button.addEventListener('click', changeAvatar);
+button.addEventListener('click', addNewMessage);
 
 
 
